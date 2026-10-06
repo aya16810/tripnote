@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TRIPNOTE — 雲端共編旅行工作台</title>
+<style>
+:root{--bg:#f5f4ef;--paper:#fffdf8;--ink:#1e211d;--muted:#73766f;--line:#dddcd3;--accent:#d85b3f;--soft:#eee9df;--green:#526c59}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Noto Sans TC",sans-serif}
+button,input,textarea,select{font:inherit}button{cursor:pointer}.app{min-height:100vh}
+.top{height:72px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 24px;background:rgba(255,253,248,.9);position:sticky;top:0;z-index:10;backdrop-filter:blur(10px)}
+.logo{font-weight:900;letter-spacing:.12em; font-size: 15px;} .logo span{font-weight:500;color:var(--muted);font-size:11px;display:block}
+.top-actions{display:flex;gap:8px}.btn{border:1px solid var(--line);background:var(--paper);padding:8px 12px;border-radius:10px;font-size:13px; font-weight: bold;}.btn.primary{background:var(--ink);color:white;border-color:var(--ink)}.btn.ghost{background:transparent}
+.btn.danger{background:#fff; color:#d85b3f; border-color:#f2dfdb;} .btn.danger:hover{background:#fdf2f0;}
+
+/* 三欄式排版：桌面版預設呈現 */
+.layout{display:grid;grid-template-columns:230px 1fr 320px;max-width:1500px;margin:auto;min-height:calc(100vh - 72px)}
+.sidebar{border-right:1px solid var(--line);padding:28px 18px}.eyebrow{font-size:11px;letter-spacing:.16em;color:var(--muted);font-weight:800}.trip-title{font-size:27px;font-weight:900;line-height:1.1;margin:10px 0 6px}
+/* 日期區塊加入點擊提示 */
+.trip-meta{font-size:13px;color:var(--muted);line-height:1.7; cursor:pointer; padding:4px; border-radius:6px; transition:0.2s;} 
+.trip-meta:hover{background:var(--soft); color:var(--ink);}
+
+.nav{margin-top:20px;display:flex; gap:6px; flex-wrap:wrap;} .nav button{border:1px solid var(--line);background:var(--paper);padding:8px 12px;border-radius:8px;font-size:12px}.nav button.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+.mini-card{margin-top:20px;border-top:1px solid var(--line);padding-top:15px}.mini-row{display:flex;justify-content:space-between;margin:8px 0;font-size:13px}
+.content{padding:28px 32px;max-width:820px;width:100%;margin:auto}
+.hero{margin-bottom:24px}.hero h1{font-size:36px;line-height:1.1;margin:8px 0}.hero p{color:var(--muted);line-height:1.6;font-size:14px}
+.date-tabs{display:flex;gap:8px;overflow:auto;padding-bottom:10px;align-items:center;}
+.date-tab{min-width:88px;border:1px solid var(--line);background:var(--paper);border-radius:12px;padding:10px;text-align:left;flex-shrink:0;transition:all 0.2s}
+.date-tab.active{background:var(--ink);color:#fff}.date-tab b{display:block;font-size:16px}.date-tab small{opacity:.7}
+
+.section-head{display:flex;justify-content:space-between;align-items:center;margin:22px 0 12px; flex-wrap:wrap; gap:10px;}
+.section-head h2{margin:0;font-size:18px}
+.place-list{display:grid;gap:12px; min-height: 80px;} 
+.place{background:var(--paper);border:1px solid var(--
